@@ -130,16 +130,16 @@
           <nav role="navigation" class="nav-menu w-nav-menu">
             <a href="index.html" class="nav-link w-nav-link active">Home</a>
             <a href="tentang.html" class="nav-link w-nav-link">Tentang</a>
-            <a href="unitrumah.html" class="nav-link w-nav-link">Unit Rumah</a>
-            <a href="galery.html" class="nav-link w-nav-link">Galery</a>
-            <a href="kontak.html" class="nav-button w-inline-block nav-hw" >
+            <!-- <a href="unitrumah.html" class="nav-link w-nav-link">Unit Rumah</a> -->
+            <!-- <a href="galery.html" class="nav-link w-nav-link">Galery</a> -->
+            <button id="scrollButton1" class="nav-button w-inline-block nav-hw" style="width: 100%;" >
               <div class="text-button white" >Kontak</div>
-            </a>
+            </button>
           </nav>
         </div>
         <div class="nav">
           <nav role="navigation" class="nav-menu w-nav-menu nav-fw">
-            <a href="index.html" class="nav-button w-inline-block">
+            <a id="scrollButton" class="nav-button w-inline-block">
               <div class="text-button white" >Kontak</div>
             </a>
           </nav>
@@ -376,30 +376,7 @@
         
       </div>
     </div>
-    <div class="section-full wf-section p-y-14" style="background-color: #F1F1F1;">
-      <div class="content">
-        <div class="w-layout-grid grid-2-columns">
-          <div class="image-block leftimg" data-w-id="985cf685-a15d-b99e-66d1-e5a9841e8844" style="opacity:0;" >
-            <img src="assets/img/3.png" onclick="show_modal('assets/img/3.png',' 3')"  loading="lazy" sizes="(max-width: 479px) 91vw, (max-width: 767px) 90vw, (max-width: 991px) 92vw, 87vw" alt="" class="image br-12" />
-          </div>
-          <div class="block-left">
-            <div class="block-heading-text"  data-w-id="514d4c3d-5e50-6beb-e8a7-5b6bed829393" style="opacity:0;">
-              <h3 class="heading-hero dark">Dapatkan brosur hunian kami!?</h3>
-              <p>Temukan semua yang perlu Anda ketahui tentang produk kami dalam brosur informasi ini.</p>
-            </div>
-            <div class="form-download-brosur" data-w-id="4e6428fa-21e9-b969-0112-6f03c423b890" style="opacity:0;width: 100%;">
-              <form >
-                <input type="text" class="text-field w-input br-12" maxlength="256" name="First-Name" data-name="First Name" placeholder="Nama Identitas" style="margin: 1rem 0;" required="">
-                <input type="text" class="text-field w-input br-12" maxlength="256" name="First-Name" data-name="First Name" placeholder="Alamat Email" style="margin: 1rem 0;" required="">
-                <input type="text" class="text-field w-input br-12" maxlength="256" name="First-Name" data-name="First Name" placeholder="Nomor Telepon (WhatsApp)" style="margin: 1rem 0;" required="">
-                <input type="submit" value="Dapatkan Brosur" style="width: 100%;" data-wait="Please wait..." class="submit-button w-button br-12"  style="margin: 1rem 0;">
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="section wf-section" id="getintouch">
+    <!-- <div class="section wf-section" id="getintouch">
       <div class="content">
         <div class="block-heading"  style="text-align: center;">
           <div class="block-heading-text" data-w-id="985cf685-a15d-b99e-66d1-e5a9841e8844" style="opacity:0; text-align: center;">
@@ -450,7 +427,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <div id="myModal" class="modal">
       <span class="close">&times;</span>
       <img class="modal-content" id="img01">
@@ -466,11 +443,11 @@
           <div class="block-footer">
             <div class="heading-footer">Quick Access</div>
             <a href="tentang.html" class="link-footer">Tentang</a>
-            <a href="unitrumah.html" class="link-footer">Unit Properti</a>
-            <a href="galery.html" class="link-footer">Galeri</a>
+            <!-- <a href="unitrumah.html" class="link-footer">Unit Properti</a> -->
+            <!-- <a href="galery.html" class="link-footer">Galeri</a> -->
           </div>
           <div class="block-footer">
-            <div class="heading-footer">Follow Us</div>
+            <div class="heading-footer">Kontak</div>
             <a href="https://www.instagram.com/amarthatownhouse/" target="_blank" class="link-footer"><img src="assets/img/ig min.png"> @amarthatownhouse</a>
             <a href="mailto:amarthatownhouse@gmail.com" target="_blank" class="link-footer"><img src="assets/img/mail min.png"> amarthatownhouse@gmail.com</a>
             <a href="https://wa.me/+6282332726668" target="_blank" class="link-footer"><img src="assets/img/phone min.png"> 0823 3272 6668</a>
@@ -508,9 +485,25 @@
     <script src="assets.website-files.com/6175e5f51349efa3b3120baa/js/webflow.6a0970294.js" type="text/javascript"></script>
     <script src="assets/js/custom.js" type="text/javascript"></script>
 
+    <script>
+      document.getElementById("scrollButton").addEventListener("click", function() {
+        document.querySelector(".section-footer.wf-section").scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+
+      document.getElementById("scrollButton1").addEventListener("click", function() {
+        document.querySelector(".section-footer.wf-section").scrollIntoView({
+          behavior: "smooth"
+        });
+      });
+    </script>
+
     <script type="text/javascript">
       $(".tab_content").hide();
       $(".tab_content:first").show();
+
+      
   
       $("ul.tabs li").click(function() {
       
